@@ -4,6 +4,7 @@ add_action( 'wp_enqueue_scripts', 'stm_enqueue_parent_styles' );
 function stm_enqueue_parent_styles() {
 
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'stm-theme-style' ) );
+	wp_register_script( 'app-select2', get_theme_file_uri( '/assets/js/parts/select2.js' ), 'stmselect2', time(), true );
 
 }
 
